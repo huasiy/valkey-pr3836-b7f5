@@ -250,7 +250,7 @@ jobs:
           repository: ${{ ((github.event_name == 'workflow_dispatch' || github.event_name == 'workflow_call') && (inputs.use_repo || github.event.inputs.use_repo)) || github.repository }}
           ref: ${{ ((github.event_name == 'workflow_dispatch' || github.event_name == 'workflow_call') && (inputs.use_git_ref || github.event.inputs.use_git_ref)) || github.ref }}
       - name: Build and test on s390x (big endian)
-        uses: uraimo/run-on-arch-action@d94c13912ea685de38fccc1109385b83fd79427d # v3.0.1
+        uses: uraimo/run-on-arch-action@fa1f3e7de95534497266c7265950b5188355fbfb # v3.2.1
         with:
           arch: s390x
           distro: ubuntu_latest
